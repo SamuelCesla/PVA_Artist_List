@@ -1,0 +1,70 @@
+<h1>
+
+    {{ interpret.jmeno }}
+    {{ interpret.prijmeni }}
+
+</h1>
+
+{% if interpret.foto %}
+
+    <img
+        src="{{ interpret.foto.url }}"
+        width="300"
+    >
+
+{% endif %}
+
+<h2>Label</h2>
+
+<p>
+    {{ interpret.label }}
+</p>
+
+<h2>Diskografie</h2>
+
+<ul>
+
+{% for album in alba %}
+
+    <li>
+
+        {{ album.nazev }}
+        ({{ album.typ }})
+
+    </li>
+
+{% empty %}
+
+    <li>
+        Žádná alba
+    </li>
+
+{% endfor %}
+
+</ul>
+
+<h2>Turné</h2>
+
+<ul>
+
+{% for vystoupeni in turne %}
+
+    <li>
+
+        {{ vystoupeni.tour.nazev_turne }}
+
+        -
+        
+        {{ vystoupeni.role }}
+
+    </li>
+
+{% empty %}
+
+    <li>
+        Interpret momentálně není na turné.
+    </li>
+
+{% endfor %}
+
+</ul>
