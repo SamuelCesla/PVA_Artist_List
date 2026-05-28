@@ -1,5 +1,5 @@
 body {
-    background-color: #181036;
+    background-color: rgba(79, 58, 242, 0.378) !important;
 }
 
 
@@ -21,5 +21,14 @@ body {
 
 
 .card-title {
+    font-weight: bold;
+}
+
+
+.list-group-item {
+    font-size: 18px;
+}
+
+h1 {
     font-weight: bold;
 }
