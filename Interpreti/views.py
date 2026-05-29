@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Interpret
+from .models import Interpret, Tour
 
 
 def home(request):
@@ -21,8 +21,17 @@ def detail_interpreta(request, id):
 
     turne = interpret.vystoupeni.all()
 
+    
+
     return render(request, 'detail.html', {
         'interpret': interpret,
         'alba': alba,
+        'turne': turne
+    })
+
+def tour(request):
+
+    turne = Tour.objects.all()
+    return render(request, 'tour.html', {
         'turne': turne
     })
