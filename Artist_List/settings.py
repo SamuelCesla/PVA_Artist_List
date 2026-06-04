@@ -75,17 +75,11 @@ WSGI_APPLICATION = 'Artist_List.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Artist_list',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '', #Emptyforlocalhostthroughdomainsocketsor'127.0.0.1' for  through TCP.
-        'PORT': '', # Set to empty string for default.
-        "OPTIONS": {
-            "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 # Password validation

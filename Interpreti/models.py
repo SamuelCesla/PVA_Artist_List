@@ -64,7 +64,7 @@ class Diskografie(models.Model):
         related_name="diskografie"
     )
 
-    datum_vydani = models.IntegerField()
+    datum_vydani = models.IntegerField(null=True, blank=True)
 
     poslechy = models.CharField(max_length=100)
 
